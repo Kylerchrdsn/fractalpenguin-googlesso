@@ -100,8 +100,8 @@ include REXML
       @inclusive_namespaces = Array.new()
       @prefix_list = nil
       @rendered_prefixes = Array.new()
-      @logger = Logger.new("xmlcanonicalizer.log")
-      @logger.level = Logger::DEBUG
+      @logger = nil#Logger.new("xmlcanonicalizer.log")
+      #@logger.level = Logger::DEBUG
     end
     
     def add_inclusive_namespaces(prefix_list, element, visible_namespaces)
