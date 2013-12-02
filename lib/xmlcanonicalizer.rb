@@ -254,7 +254,7 @@ include REXML
     def write_attribute_axis(node)
       list = Array.new()
       node.attributes().sort.each{|key, attr|
-        list.push(attr) #if (!is_namespace_node(attr.value()) && !is_namespace_decl(attr)) # && is_node_visible(
+        list.push(attr) if (!is_namespace_node(attr.value()) && !is_namespace_decl(attr)) # && is_node_visible(
       }
       if (!@exclusive && node.parent() != nil && node.parent().parent() != nil)
         cur = node.parent()
@@ -278,7 +278,7 @@ include REXML
       end
       list.each{|attribute|
         if (attribute != nil)
-          if false#(attribute.name() != "xmlns")
+          if (attribute.name() != "xmlns")
             @res = @res + " " + normalize_string(attribute.to_string(), NODE_TYPE_ATTRIBUTE).gsub("'",'"')
           end
           #	else
