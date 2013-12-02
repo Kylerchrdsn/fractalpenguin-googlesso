@@ -33,8 +33,8 @@ include OpenSSL
       @encodedresponse = ""
       @authenticateform = ""
 
-      @logger = Logger.new("response.log")
-      @logger.level = Logger::DEBUG
+      @logger = nil#Logger.new("response.log")
+      #@logger.level = Logger::DEBUG
     end
     
     # Process the SAML request, generate a response, and generate an auth form @.@
