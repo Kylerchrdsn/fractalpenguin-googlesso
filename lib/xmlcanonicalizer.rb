@@ -252,7 +252,7 @@ class XmlCanonicalizer
 
   def write_attribute_axis(node)
     list = Array.new()
-    node.attributeseach_attribute{|attr|
+    node.attributes.each_attribute{|attr|
       list.push(attr) if (!is_namespace_node(attr.value()) && !is_namespace_decl(attr)) # && is_node_visible(
     }
     if (!@exclusive && node.parent() != nil && node.parent().parent() != nil)
