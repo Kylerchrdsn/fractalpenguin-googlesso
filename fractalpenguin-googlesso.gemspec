@@ -1,7 +1,7 @@
 Gem::Specification.new do |spec|
   spec.name        = 'fractalpenguin-googlesso'
-  spec.version     = '0.0.4'
-  spec.date        = '2013-12-02'
+  spec.version     = '0.0.5'
+  spec.date        = '2016-03-17'
   spec.summary     = 'Google SSO'
   spec.description = 'The standard GoogleSSO gem with a few modifications and enhancments'
   spec.authors     = ["FractalPenguin", 'kylerchrdsn']

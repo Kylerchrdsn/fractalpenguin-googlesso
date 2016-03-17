@@ -252,7 +252,8 @@ class XmlCanonicalizer
 
   def write_attribute_axis(node)
     list = Array.new()
-    node.attributes.each_attribute{|attr|
+    node.attributes.sort.each{|key, value|
+      attr = REXML::Attribute.new(key, value)
       list.push(attr) if (!is_namespace_node(attr.value()) && !is_namespace_decl(attr)) # && is_node_visible(
     }
     if (!@exclusive && node.parent() != nil && node.parent().parent() != nil)
